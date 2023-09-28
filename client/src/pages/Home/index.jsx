@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
-import Announcement from '../../components/Announcement';
-import NavBar from '../../components/NavBar';
-import Slider from '../../components/Slider';
+import Announcement from '../../components/Announcement/Announcement';
+import NavBar from '../../components/NavBar/NavBar';
+import Slider from '../../components/Slider/Slider';
+import Categories from '../../components/Categories/Categories';
 
 
 const Container = styled.div`
@@ -20,6 +21,7 @@ function Home() {
       <Announcement />
       <NavBar />
       <Slider />
+      <Categories />
     </Container>
   )
 }

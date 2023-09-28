@@ -6,10 +6,9 @@ import { Badge } from '@mui/material';
 
 
 const Container = styled.div`
-    width: 100%;
-    height: 80px;
+  width: 100%;
+  height: 80px;
 `
-
 
 
 function NavBar() {
@@ -28,11 +27,11 @@ function NavBar() {
         </div>
         <nav>
           <ul>
-            <a><li>REGISTER</li></a>
-            <a><li>SIGN IN</li></a>
-            <a>
+            <a href="#register"><li>REGISTER</li></a>
+            <a href="#login"><li>SIGN IN</li></a>
+            <a href="#cart">
               <li>
-                <Badge badgeContent={4} color="primary">
+                <Badge badgeContent={4} color="primary" className='cart'>
                   <ShoppingCartOutlined />
                 </Badge>
               </li>
