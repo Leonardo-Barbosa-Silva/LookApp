@@ -10,6 +10,7 @@
     border: none
     color: variables.$primary-font-color
     outline: none
+    user-select: none
 
 h2
     font-size: 3rem
@@ -17,7 +18,7 @@ h2
 h3
     font-size: 1.7rem
     letter-spacing: 1px
-    color: variables.$primary-color
+    color: variables.$secondary-color
 
 button
     border-top: 3px solid #a7a7a7
@@ -94,7 +95,7 @@ button:hover
     width: fit-content
     height: 100%
     display: flex
-    background: linear-gradient(to top,  #efefef 60%, variables.$terciary-color)
+    background: linear-gradient(to top,  #efefef 10%, variables.$terciary-color)
 
     .slider-content
         width: 100vw
@@ -129,3 +130,83 @@ button:hover
                 width: 80%
                 flex-wrap: wrap
                 margin-bottom: 50px
+
+
+.categories-content
+    width: 100%
+    height: 100%
+    display: flex
+    gap: 30px
+    padding: 0 30px
+
+    .image
+        width: 100%
+        height: 100%
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    .title
+        position: absolute
+        top: 35%
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 30px
+
+        h2
+            color: #fff
+            font-size: 1.7rem
+        
+        button
+            border: none
+            color: #333
+            background-color: #fff
+            font-size: 1.2rem
+            font-weight: 400
+            width: 180px
+
+
+@mixin tamanho-padrao
+    width: 100%
+    height: 100%
+
+.products-content
+    width: 100%
+    height: 100%
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 50px
+    padding: 0 30px
+
+    .image
+        @include tamanho-padrao
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+        img
+            width: calc(100% - 80px)
+            height: 100%
+            object-fit: contain
+
+    .icons
+        @include tamanho-padrao
+        position: absolute
+        top: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 5px
+        z-index: 9
+
+        .icon
+            padding: 8px
+            background-color: #fff
+            border-radius: 50%
+            display: flex
+            justify-content: center
+            align-items: center

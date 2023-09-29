@@ -5,16 +5,17 @@ import Content from "./Content";
 import { useState } from "react";
 
 
-const Container = styled.div`
+const Container = styled.section`
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow-x: hidden;
 `
 const ArrowLeft = styled.div`
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #d7d7d7;
+    background-color: #bababa;
     position: absolute;
     left: 5px;
     top: 50%;
@@ -22,14 +23,14 @@ const ArrowLeft = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.3;
     z-index: 9
 `
 const ArrowRight = styled.div`
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #d7d7d7;
+    background-color: #bababa;
     position: absolute;
     right: 5px;
     top: 50%;
@@ -37,7 +38,7 @@ const ArrowRight = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.3;
     z-index: 9
 `
 

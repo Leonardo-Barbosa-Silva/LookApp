@@ -4,6 +4,7 @@ import Announcement from '../../components/Announcement/Announcement';
 import NavBar from '../../components/NavBar/NavBar';
 import Slider from '../../components/Slider/Slider';
 import Categories from '../../components/Categories/Categories';
+import Products from '../../components/Products/Products';
 
 
 const Container = styled.div`
@@ -22,6 +23,7 @@ function Home() {
       <NavBar />
       <Slider />
       <Categories />
+      <Products />
     </Container>
   )
 }

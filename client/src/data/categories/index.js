@@ -7,17 +7,17 @@ import cat3 from '../../images/categories/cat3.jpg';
 export const contents = [
     {
         img: cat1,
-        title: "ON STYLE",
+        title: "SHIRT STYLE",
         id: 1
     },
     {
         img: cat2,
-        title: "ON STYLE",
-        id: 1
+        title: "LOUNGEWEAR LOVE",
+        id: 2
     },
     {
         img: cat3,
-        title: "ON STYLE",
-        id: 1
+        title: "LIGHT JACKETS",
+        id: 3
     }
 ]
