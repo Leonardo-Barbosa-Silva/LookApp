@@ -1,4 +1,5 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@mui/icons-material"
+import { useState } from "react"
 import styled from "styled-components"
 
 
@@ -7,14 +8,14 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #dfdfff;
+    border-radius: 5px;
 `
 
 
 function Product({ content }) {
+    const [ openedIcons, setOpenedIcons ] = useState(false)
+
   return (
     <Container>
         <div className="image">
@@ -22,7 +23,7 @@ function Product({ content }) {
         </div>
         <div className="icons">
             <div className="icon">
-                <ShoppingCartOutlined color="#fff"/>
+                <ShoppingCartOutlined />
             </div>
             <div className="icon">
                 <SearchOutlined /> 

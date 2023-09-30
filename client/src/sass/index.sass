@@ -12,8 +12,10 @@
     outline: none
     user-select: none
 
+h1
+    font-size: 2.4rem
 h2
-    font-size: 3rem
+    font-size: 2.25rem
     letter-spacing: 1px
 h3
     font-size: 1.7rem
@@ -38,7 +40,10 @@ button:hover
     background-color: #efefef
 
 
+
 .navbar-content
+    font-size: 1.2rem
+    font-weight: 600
     width: 100%
     height: 100%
     display: flex
@@ -51,7 +56,6 @@ button:hover
         align-items: center
         justify-content: flex-start
         gap: 20px
-        font-weight: 600
 
         .lang:hover
             cursor: pointer
@@ -67,6 +71,7 @@ button:hover
                 padding: 2px 5px
                 background-color: transparent
                 font-family: variables.$secondary-font
+                font-size: 0.7rem
     
     .logo
         flex: 1
@@ -81,8 +86,6 @@ button:hover
             display: flex
             gap: 30px
 
-            li
-                font-weight: 600
             li:hover
                 cursor: pointer
                 opacity: 0.4
@@ -174,11 +177,10 @@ button:hover
     height: 100%
 
 .products-content
-    width: 100%
-    height: 100%
+    @include tamanho-padrao
     display: grid
     grid-template-columns: repeat(4, 1fr)
-    gap: 50px
+    gap: 20px
     padding: 0 30px
 
     .image
@@ -189,8 +191,8 @@ button:hover
         align-items: center
 
         img
-            width: calc(100% - 80px)
-            height: 100%
+            width: 60%
+            height: 60%
             object-fit: contain
 
     .icons
@@ -200,13 +202,146 @@ button:hover
         display: flex
         justify-content: center
         align-items: center
-        gap: 5px
+        gap: 10px
         z-index: 9
+        opacity: 0
+        border-radius: 5px
+    
+    .icons:hover
+        background-color: rgba(0, 0, 0, 0.4)
+        cursor: pointer
+        opacity: 1
+        transition: all 0.1s ease-in
 
         .icon
             padding: 8px
-            background-color: #fff
+            background-color: #ffffff
             border-radius: 50%
             display: flex
             justify-content: center
             align-items: center
+            
+        .icon:hover
+            cursor: pointer
+            transform: scale(1.2)
+            background-color: #d6d4ff
+
+
+.newsletter-content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    h1
+        font-size: 4rem
+        font-weight: 800
+    
+    h3
+        font-weight: 400
+    
+    .input
+        width: 100%
+        height: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 50px
+
+        input
+            height: 100%
+            width: 100%
+            padding-left: 20px
+            border: 1px solid #ccc
+
+        button
+            border: none
+            height: 100%
+            background-color: variables.$secondary-color
+
+            svg path
+                fill: variables.$primary-color
+
+
+footer
+
+    ul
+        display: flex
+        flex-direction: column
+        gap: 15px
+
+        li
+            color: #fff
+            font-size: 0.6rem
+            font-weight: 400
+            text-transform: uppercase
+        
+        li:hover
+            cursor: pointer
+            opacity: 0.3
+
+    .services
+        width: 100%
+        height: 280px
+        display: flex
+        justify-content: space-between
+        padding: 30px 30px 30px 60px
+
+        .title
+            margin-bottom: 30px
+
+            h4
+                color: #fff
+                font-size: 0.8rem
+                font-weight: bolder
+        
+        .payments .content
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 20px
+        
+        .logo
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            justify-content: flex-start
+            position: relative
+            margin-left: 200px
+
+            img
+                width: 100%
+                height: 100%
+
+            .social
+                position: absolute
+                bottom: 10px
+
+    .copy
+        width: 100%
+        height: 80px
+        border-top: 1px solid #fff
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 30px 30px 30px 60px
+
+        .copyright
+            width: 60%
+            
+            p
+                font-family: variables.$secondary-font
+                font-size: 0.5rem
+                font-weight: 300
+                color: #fff
+        
+        .logo
+            h1
+                font-size: 2.5rem
+                color: #fff
+
+
+
+.filter
+    display: flex
+    align-items: center
+    gap: 50px
