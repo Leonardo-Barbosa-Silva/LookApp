@@ -27,9 +27,9 @@ function NavBar() {
         </div>
         <nav>
           <ul>
-            <a href="#register"><li>REGISTER</li></a>
-            <a href="#login"><li>SIGN IN</li></a>
-            <a href="#cart">
+            <a href=""><li>REGISTER</li></a>
+            <a href=""><li>SIGN IN</li></a>
+            <a href="">
               <li>
                 <Badge badgeContent={4} color="primary" className='cart'>
                   <ShoppingCartOutlined />

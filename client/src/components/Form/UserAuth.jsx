@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components'
 
 
@@ -90,7 +91,7 @@ const Container = styled.section`
     }
 
     p {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
 
     a:hover {
@@ -117,6 +118,8 @@ function UserAuth() {
     confirmPassword: ''
   })
 
+  const navigate = useNavigate()
+
   function onChangeForm(e) {
     if (pageType === 'login') {
       setLoginForm({
@@ -131,6 +134,10 @@ function UserAuth() {
     }
   }
 
+  function handleSubmit() {
+    navigate('/home')
+  }
+
   return (
     <Container $pageType={pageType}>
       {pageType === 'login' && (
@@ -138,7 +145,7 @@ function UserAuth() {
           <div className="title">
             <h1>SIGN IN</h1>
           </div>
-          <form>
+          <form onSubmit={() => handleSubmit()}>
               <input
                 id="email"
                 name="email"
@@ -173,7 +180,7 @@ function UserAuth() {
         <div className="title">
           <h1>SIGN UP</h1>
         </div>
-        <form>
+        <form onSubmit={() => handleSubmit()}>
             <input
               id="firstName"
               name="firstName"

@@ -5,6 +5,7 @@ import Newsletter from '../../components/Newsletter/Newsletter';
 import Footer from '../../components/Footer/Footer';
 import SingleProduct from '../../components/Products/SingleProduct';
 import { contents } from '../../data/products';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const Container = styled.section`
@@ -13,11 +14,21 @@ const Container = styled.section`
 `
 
 function Product() {
+    const navigate = useNavigate()
+    const location = useLocation()
+    const content = location.state && location.state.data
+
     return (
         <Container>
             <Announcement />
             <NavBar />
-            <SingleProduct content={contents[2]}/>
+            <SingleProduct content={content ? content : contents[2]}/>
+            <button 
+                onClick={() => navigate('/products')}
+                style={{ marginTop: '100px', marginLeft: '100px' }}
+            >
+                Filter Products Here!
+            </button>
             <Newsletter />
             <Footer />
         </Container>

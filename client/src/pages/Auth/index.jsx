@@ -26,6 +26,7 @@ function Auth() {
   return (
     <Container>
         <UserAuth />
+        <h3 style={{ marginTop: '50px', color: 'red' }}>Just for frontend fun!</h3>
     </Container>
   )
 }

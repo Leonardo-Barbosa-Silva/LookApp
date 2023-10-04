@@ -5,6 +5,7 @@ import Newsletter from "../../components/Newsletter/Newsletter";
 import Footer from "../../components/Footer/Footer";
 import Products from "../../components/Products/Products";
 import Filters from "../../components/Filters/Filters";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -16,12 +17,20 @@ const Container = styled.section`
 
 
 function ProductsList() {
+  const navigate = useNavigate()
+
   return (
     <Container>
         <Announcement />
         <NavBar />
         <Filters />
         <Products />
+        <button 
+          onClick={() => navigate('/home')}
+          style={{ marginTop: '100px', marginLeft: '100px' }}
+        >
+          Go to Home!
+        </button>
         <Newsletter />
         <Footer />
     </Container>

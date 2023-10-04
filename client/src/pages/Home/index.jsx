@@ -7,6 +7,7 @@ import Categories from '../../components/Categories/Categories';
 import Products from '../../components/Products/Products';
 import Newsletter from '../../components/Newsletter/Newsletter';
 import Footer from '../../components/Footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -18,6 +19,8 @@ const Container = styled.div`
 
 
 function Home() {
+  const navigate = useNavigate()
+
   return (
     <Container>
       <Announcement />
@@ -25,6 +28,18 @@ function Home() {
       <Slider />
       <Categories />
       <Products />
+      <button 
+        onClick={() => navigate('/products')}
+        style={{ marginTop: '100px', marginLeft: '100px' }}
+      >
+        Filter Products Here!
+      </button>
+      <button 
+        onClick={() => navigate('/auth')}
+        style={{ marginTop: '100px', marginLeft: '100px', color: 'red' }}
+      >
+        Logout
+      </button>
       <Newsletter />
       <Footer />
     </Container>
