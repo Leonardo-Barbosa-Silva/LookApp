@@ -25,13 +25,13 @@ function Product({ content }) {
             <img src={content.img} alt=""/>
         </div>
         <div className="icons">
-            <div className="icon">
+            <div className="icon" onClick={() => navigate('/product', { state: { data: content } })}>
                 <ShoppingCartOutlined />
             </div>
             <div className="icon" onClick={() => navigate('/product', { state: { data: content } })}>
                 <SearchOutlined />
             </div>
-            <div className="icon">
+            <div className="icon" onClick={() => navigate('/product', { state: { data: content } })}>
                 <FavoriteBorderOutlined />
             </div>
         </div>
