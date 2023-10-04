@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { contents } from '../../data/payments';
 import leonardoLogo from '../../images/leonardo-logo.png';
-import { GitHub, LinkedIn } from "@mui/icons-material";
+//import { GitHub, LinkedIn } from "@mui/icons-material";
 
 
 const Container = styled.footer`

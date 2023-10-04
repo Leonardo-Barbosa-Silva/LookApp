@@ -6,7 +6,7 @@ import styled from "styled-components"
 const Container = styled.section`
     width: 100%;
     height: 70vh;
-    background: linear-gradient(to top, #efefef 0%, #f0e0e0, #efefef 100%);
+    background: linear-gradient(to top, #efefef 0%, #f0c0f0, #efefef 100%);
     margin: 20px 0 100px 0;
     display: flex;
     flex-direction: column;

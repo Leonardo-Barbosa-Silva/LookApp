@@ -9,23 +9,13 @@ const Container = styled.section`
     justify-content: space-around;
     align-items: center;
     margin-top: 50px;
-
-    span {
-        font-weight: 500;
-        font-family: Rubik;
-    }
-
-    select {
-        margin-left: 10px;
-        padding: 8px 12px;
-    }
 `
 
 
 function Filters() {
   return (
     <Container>
-        <div className="filter">
+        <div className="filters">
             <div className="colors">
                 <span>Colors:</span>
                 <select>

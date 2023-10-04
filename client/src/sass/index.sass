@@ -272,7 +272,7 @@ footer
 
         li
             color: #fff
-            font-size: 0.6rem
+            font-size: 0.7rem
             font-weight: 400
             text-transform: uppercase
         
@@ -292,7 +292,7 @@ footer
 
             h4
                 color: #fff
-                font-size: 0.8rem
+                font-size: 1rem
                 font-weight: bolder
         
         .payments .content
@@ -330,7 +330,7 @@ footer
             
             p
                 font-family: variables.$secondary-font
-                font-size: 0.5rem
+                font-size: 0.6rem
                 font-weight: 300
                 color: #fff
         
@@ -341,7 +341,74 @@ footer
 
 
 
-.filter
+.filters
     display: flex
     align-items: center
     gap: 50px
+
+    span 
+        font-weight: 500
+        font-family: Rubik
+
+    select 
+        margin-left: 10px
+        padding: 8px 12px
+
+.text 
+    width: 60%
+    height: 100%
+    display: flex
+    flex-direction: column
+    gap: 30px
+
+    h2
+      font-size: 50px
+      font-weight: 300
+    
+    h4 
+      font-weight: 100
+      font-family: variables.$secondary-font
+      letter-spacing: 1.5px
+    
+
+    .price 
+      font-size: 50px
+      font-weight: 200
+    
+
+.colors
+    display: flex
+    align-items: center
+    gap: 5px
+
+    .color
+        width: 25px
+        height: 25px
+        border-radius: 50%
+
+    .color:hover
+        cursor: pointer
+
+    .color.black
+        background-color: black
+        margin-left: 5px
+    .color.grey
+        background-color: grey
+    .color.blue
+        background-color: blue
+
+
+.cart
+    display: flex
+    align-items: center
+    gap: 50px
+
+    .amount
+        display: flex
+        align-items: center
+        gap: 5px
+
+        span
+            border: 2px solid #000
+            border-radius: 5px
+            padding: 5px 15px
